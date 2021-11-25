@@ -31,7 +31,7 @@ export default function Function1(){
     }
     
     return (
-        <div>
+        <div className="input">
             <label >Enter your array:</label>
             <input onChange={(e) => handleChange(e)} type="text"  name="yourArray" />
             <button onClick={() => handleClick()}>
