@@ -4,7 +4,7 @@ import Form from './pages/Form';
 import Header from './components/Header';
 import Pokemon from './pages/Pokemon';
 import Function1 from './pages/Function1';
-import { Routes, Route, Outlet, Link } from 'react-router-dom';
+import { Routes, Route, Outlet, NavLink as Link } from 'react-router-dom';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
           <Route index element={<Form />} />
           <Route path="pokemon" element={<Pokemon />} />
           <Route path="function1" element={<Function1 />} />
-          {/* <Route path="*" element={<NoMatch />} /> */}
+          
         </Route>
       </Routes>
     </div>
@@ -27,17 +27,21 @@ function Layout() {
       <Header />
       <nav>
         <div>
-          <Link to="/">Home</Link>
+          <Link activeClassName="active" to="/">Home</Link>
         </div>
         <div>
-          <Link to="/pokemon">Pokemon</Link>
+          <Link activeClassName="active" to="/pokemon">Pokemon</Link>
         </div>
         <div>
-          <Link to="/function1">Function1</Link>
+          <Link activeClassName="active" to="/function1">Function1</Link>
+        </div>
+        <div>
+          <Link activeClassName="active" to="/function2">Function2</Link>
+        </div>
+        <div>
+          <Link activeClassName="active" to="/function3">Function3</Link>
         </div>
       </nav>
-
-      <hr />
       <Outlet />
     </div>
   );
