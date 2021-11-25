@@ -4,7 +4,7 @@ import Form from './pages/Form';
 import Header from './components/Header';
 import Pokemon from './pages/Pokemon';
 import Function1 from './pages/Function1';
-import { Routes, Route, Outlet, NavLink as Link } from 'react-router-dom';
+import { Routes, Route, Outlet, NavLink  } from 'react-router-dom';
 
 function App() {
   return (
@@ -27,19 +27,19 @@ function Layout() {
       <Header />
       <nav>
         <div>
-          <Link activeClassName="active" to="/">Home</Link>
+          <NavLink to="/">Home</NavLink>
         </div>
         <div>
-          <Link activeClassName="active" to="/pokemon">Pokemon</Link>
+          <NavLink to="/pokemon">Pokemon</NavLink>
         </div>
         <div>
-          <Link activeClassName="active" to="/function1">Function1</Link>
+          <NavLink to="/function1">Function1</NavLink>
         </div>
         <div>
-          <Link activeClassName="active" to="/function2">Function2</Link>
+          <NavLink to="/function2">Function2</NavLink>
         </div>
         <div>
-          <Link activeClassName="active" to="/function3">Function3</Link>
+          <NavLink to="/function3">Function3</NavLink>
         </div>
       </nav>
       <Outlet />
