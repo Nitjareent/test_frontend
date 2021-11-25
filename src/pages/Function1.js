@@ -13,9 +13,14 @@ export default function Function1(){
         if (mapArray.length>1){
             const max = Math.max.apply(null, mapArray)
             const maxNum = mapArray.filter(element => element===max)
-            console.log(maxNum.length);
             mapArray.splice(mapArray.indexOf(max), maxNum.length)
-            setResult(Math.max.apply(null, mapArray))
+            const secoundMax = Math.max.apply(null, mapArray)
+            if (!isFinite(secoundMax)){
+                setResult(max)  
+            }else {
+                setResult(secoundMax)
+            }
+            
         }
         else if (mapArray.length===0||isNaN(mapArray)){
             setResult('null')
